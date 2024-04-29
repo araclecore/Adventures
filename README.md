@@ -1,4 +1,5 @@
-# Adventures
+# Adventures API
+Adventures API (aAPI) - основной фреймворк для работы с плагинами Adventures
 ### Создание таблицы в базе данных
 ```java
 //Декларирование output запроса
