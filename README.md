@@ -32,7 +32,7 @@ output.modify("status", "offline");
 //Обновление значений в таблице
 output.update();
 ```
-### Получение информации в базе данных
+### Получение информации из базы данных
 ```java
 //Декларирование input запроса
 Input input = new Input(AAPI.connection, "Test");
