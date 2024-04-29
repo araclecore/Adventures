@@ -1,5 +1,5 @@
 # Adventures API
-Adventures API (aAPI) - основной фреймворк для работы с плагинами Adventures
+Adventures API (aAPI) - фреймворк для работы с плагинами Adventures
 ## Работа с MySQL
 В рамках API бывают 2 типа запроса - **input** и **output**:
 - **Input** отвечает за запросы из базы данных на сервер.
