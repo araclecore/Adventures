@@ -1,16 +1,30 @@
 ## Работа с Display анимациями
-### Создвние реестра кадров анимации
+### Создание реестра кадров анимации
 ```java
 //Material.STONE - ID предмета Display
 //true - цикличность анимации
 Frames frames = new Frames(Material.STONE,true);
 ```
-###Добавление кадра анимации
+### Добавление кадра анимации
 ```java
 frames.add(new Frame(
         new Position(0, 0, 0), //обозначение позиции Display в текущем кадре
         new Size(2, 2, 2), //обозначение размера Display в текущем кадре
         new Rotation(90, 0, 0), 0, 20)); //обозначение поворота Display в текущем кадре, а также CustomModelData и длительность кадра
+```
+Чтобы добавить еще один кадр, продублируйте код выше
+### Создание и проигрывание анимации
+```java
+Animation animation = new Animation(player, location);
+animation.play(frames, false); //false - закрепление анимации на сущности (пассажир)
+```
+### Перемещение анимации
+```java
+//player.getWorld(), 8, -61, 8) - точка телепортации
+//50 - скорость телепортации
+//0 - задержка телепортации
+animation.move(new Location(player.getWorld(), 8, -61, 8), 50, 0);
+animation.move(new Location(player.getWorld(), 8, -30, 8), 40, 50);
 ```
 ## Работа с MySQL
 В рамках API бывают 2 типа запроса - **input** и **output**:
