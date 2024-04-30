@@ -1,5 +1,17 @@
-# Adventures API
-Adventures API (aAPI) - фреймворк для работы с плагинами Adventures
+## Работа с Display анимациями
+### Создвние реестра кадров анимации
+```java
+//Material.STONE - ID предмета Display
+//true - цикличность анимации
+Frames frames = new Frames(Material.STONE,true);
+```
+###Добавление кадра анимации
+```java
+frames.add(new Frame(
+        new Position(0, 0, 0), //обозначение позиции Display в текущем кадре
+        new Size(2, 2, 2), //обозначение размера Display в текущем кадре
+        new Rotation(90, 0, 0), 0, 20)); //обозначение поворота Display в текущем кадре, а также CustomModelData и длительность кадра
+```
 ## Работа с MySQL
 В рамках API бывают 2 типа запроса - **input** и **output**:
 - **Input** отвечает за запросы из базы данных на сервер.
