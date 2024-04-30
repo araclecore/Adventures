@@ -15,8 +15,11 @@ frames.add(new Frame(
 Чтобы добавить еще один кадр, продублируйте код выше
 ### Создание и проигрывание анимации
 ```java
-Animation animation = new Animation(player, location);
-animation.play(frames, false); //false - закрепление анимации на сущности (пассажир)
+Animation animation = new Animation(player, location, frames);
+//Указание свойств нулевого кадра и проигрывание
+animation.play(new Position(0, -1.8F, 0),
+        new Size(2, 0.01F,2),
+        new Rotation(0, 360, 0),true); //false - закрепление анимации на сущности (пассажир)
 ```
 ### Перемещение анимации
 ```java
